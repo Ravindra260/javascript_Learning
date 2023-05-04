@@ -16,24 +16,36 @@ button{
         color:red;
      }
      input:focus{
-        color: blue;
+        color:red;
         background-color: aqua;
+      
      }
-     a:active{
+     option:enabled{
+
+      color: brown;
+      background-color: rgb(0, 255, 13);
+
+      
+     }
+     a:visited{
         color: aqua;
      }
-     div p:nth-child(odd){
+     div p:nth-child(even){
         font-size: 20px;
         color: red;
         
         
+     }
+     input:checked{
+      height: 50px;
+      width: 50px;
      }
 
     </style>
 </head>
 <body>
     
-    <a href="https://masaischool.com"> <button>Singn UP</button></a>
+    <a href="https://masaischool.com" target="_blank"> <button>Singn UP</button></a>
     <input placeholder="enter name"/> <br/>
     <div>
     <p>p1</p>
@@ -44,5 +56,16 @@ button{
     <p>p6</p>
     <p>p7</p>
     </div>
+    <h2>option enable</h2>
+    <select>
+    <option value="london">London</option>
+    <option value="dubai"> Dubai</option>
+    <option value="jalandha" disabled>jalandha</option>
+    <option value="nepal" >nepal</option>
+    </select>
+    <input type="radio" value="male"/>
+    <a class="highlight" href="css_syntax.asp">CSS Syntax</a>
+
+
 </body>
 </html>

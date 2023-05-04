@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psedoeleement</title>
+    <style>
+        ::selection{
+            color: brown;
+        }
+        p::first-letter{
+            color: aqua;
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+       div p::first-letter{
+        color: blue;
+       }
+       span p::after{
+        content: url(data:image/png;base64,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);
+        height: 10px;
+        width: 10px;
+       }
+
+    </style>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsa
+    incidunt quaerat eligendi fugit sit debitis exercitationem officiis, dolor blanditiis
+    odio atque consectetur obcaecati dolores quisquam doloribus placeat qui voluptates.</p>
+    <div>
+        <p>this second para</p>
+    </div>
+    <span><p>this is third para</p></span>
+    
+</body>
+</html>
