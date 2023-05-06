@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrap</title>
+    <style>
+        #container {
+            display: flex;
+            background-color: aqua;
+            justify-content:space-evenly;
+
+      }
+      #container > div{
+        height: 100px;
+        width: 100px;
+        color: azure;
+      }
+      #container > div:nth-child(odd){
+        background-color: coral;
+
+      }
+      #container > div:nth-child(even){
+        background-color: teal;
+      }
+        
+      
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+    </div>
+</body>
+</html>

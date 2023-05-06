@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alignment</title>
+    <style>
+        /* alignment item have 5 property
+        1.stretch 2.flex-start 3.flex-end 4.center 5.baseline */
+        #box{
+            display: flex;
+            padding: 50px;
+            background-color: tomato;
+            height: 300px;
+            align-items: first baseline;
+        }
+        #box > div{
+
+            width: 100px;
+        }
+        #box>div:first-child{
+            background-color: blue;
+            padding: 70px 0px;
+
+        }
+        #box>div:nth-child(2){
+            background-color: aqua;
+            padding: 30px 0px;
+        }
+        #box>div:last-child{
+            background-color: blueviolet;
+            padding: 50px 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
