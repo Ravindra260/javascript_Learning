@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAsai Navabar</title>
+    <style>
+        #navbar{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #navbar >div:first-child{
+            height: 100%;
+            width: 10%;
+        }
+        #navbar > div:last-child{
+            height: 100%;
+            width: 70%;
+        }
+        #navbar > div{
+            display: flex;
+            justify-content: space-around;
+            text-transform: uppercase;
+            align-items: center;
+            border: 0px;
+            
+        }
+        #para:hover{
+            background-color: lightpink;
+            padding: 5px;
+            color:blue;
+        }
+        button{
+            background-color:white;
+            padding:16px;
+            border: 1px solid red;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color:lightpink;
+            color: red;
+        }
+        select+div {
+            background-color:antiquewhite;
+            border: 2px solid blue;
+            border-radius: 10px;
+            padding: 0px 10px;
+        }
+        select+div:hover{
+            background-color: lightskyblue;
+        }
+        select{
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div>
+            <img src="https://masaischool.com/img/navbar/logo.svg" alt="masai logo">
+        </div>
+        <div>
+            <p id="para">fess and pap</p>
+            <p id="para">event and contest</p>
+            <p id="para">faq</p>
+            <select>
+                <option value="free resourses">Free resource</option>
+                <option value="Masai learning">Masai learning</option>
+                <option value="">Masai Blog</option>
+            </select>
+            <div>
+                <p>refer and earn</p>
+            </div>
+            <button>Login</button>
+        </div>
+    </div>
+</body>
+</html>
