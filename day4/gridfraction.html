@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Fraction</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+
+        }
+    #container > div{
+        font-size: large;
+        padding: 20px;
+    }
+    #line{
+        grid-row-end: span 4;
+    }
+    #container > div:nth-child(1){
+        background-color: blue;
+    }
+    #container > div:nth-child(2){
+        background-color: rgb(255, 0, 85);
+    }
+    #container > div:nth-child(3){
+        background-color: rgb(0, 255, 170);
+    }
+    #container > div:nth-child(4){
+        background-color: pink;
+    }
+    #container > div:nth-child(5){
+        background-color: orange;
+    }
+    #container > div:nth-child(6){
+        background-color: green;
+    }
+    #container > div:nth-child(7){
+        background-color: violet;
+    }
+    #container > div:nth-child(8){
+        background-color: blue;
+    }
+    #container > div:nth-child(9){
+        background-color: teal;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="line">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Grid</title>
+    <style>
+        /* css grid->
+        1> grid template
+        2> gird gap 
+        3> grid repeat fi*/
+        
+        #container{
+            display: grid;
+            grid-template-columns:repeat(2,100px);
+            grid-template-rows:repeat(2,100px);
+            gap: 20px;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+        #container > div{
+            padding: 20px;
+            font-size: 30px;
+        }
+       #container > div:nth-child(1){
+        background-color: yellow;
+       }
+       #container > div:nth-child(2){
+        background-color:blue;
+       }
+       #container > div:nth-child(3){
+        background-color: green;
+       }
+       #container > div:nth-child(4){
+        background-color: red;
+       }
+       #container > div:nth-child(4){
+        background-color: aqua;
+       }
+       
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    </div>
+</body>
+</html>

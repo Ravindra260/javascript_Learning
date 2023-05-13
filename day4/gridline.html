@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line based Placement</title>
+    <!-- grid line palcement and grid template area method -->
+    <style>
+        #container{
+            background-color:aliceblue;
+            display: grid;
+            grid-template-columns: repeat(3,100px);
+            gap: 20px;
+            grid-template-areas: 
+            "grn dpink orng"
+            "gr  ylw vl ";
+        }
+        #container>div{
+            padding: 20px;
+            font-size: 30px;
+        }
+        #container > div:nth-child(1){
+            background-color: yellow;
+            grid-area: ylw;
+        }
+        #container > div:nth-child(2){
+            background-color: grey;
+            grid-area: gr;
+        }
+        #container > div:nth-child(3){
+            background-color: orange;
+            grid-area: orng;
+        }
+        #container > div:nth-child(4){
+            background-color: pink;
+            grid-area: dpink;
+        }
+        #container > div:nth-child(5){
+            background-color: green;
+            grid-area:grn ;
+        }
+        #container > div:nth-child(6){
+            background-color: violet;
+            grid-area: vl;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

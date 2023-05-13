@@ -10,51 +10,45 @@
             display: flex;
             width: 100%;
              border: 5px solid red;
-            align-items: center;
-             justify-content:space-around;
+             justify-content: space-around;
+             align-items: center;
+        
         }
-        #contain > div{
-          margin: 2px;
-          padding: 5px;
-          border: 2px solid yellow;
-          
-          
-        }
-        #contain{
+        #mainbox > div {
             display: flex;
-            border: 3px solid blue;
-        }
-        #contain > div{
-          height: 100%
-           width: 70%;
+          border: 10px solid blue; 
         }
         button{
             background-color: rgb(234, 0, 255);
             border-radius: 5px;
             padding: 5px;
         }
-        #mainbox > div{
-            border: 3px solid green;
+        #para{
+            border: 3px solid yellow;
+
         }
     </style>
 </head>
 <body>
     <div id="mainbox">
-        <div><img src="https://masaischool.com/img/navbar/logo.svg" alt="masailogo" width="100px"></div>
-        <div id="contain">
+        <div>
+            <img src="https://masaischool.com/img/navbar/logo.svg" alt="masailogo" width="100px">
+        </div>
+        <div>
+        
+            <p>FEES & PAP</p> 
+            <p >ABOUT US</p>
+            <p >HIRE FROM US</p>
+            <p >FQA</p>
+            <p>EVENTS</p>
+            <select>
+                <option>COURSES</option>
+                <option value="price">Price</option>
+            </select>
             <div>
-                <select>
-                    <option>COURSES</option>
-                    <option value="price">Price</option>
-                </select>
+            <button padd>Refer & earn</button>
             </div>
-            <div>FEES & PAP</div>
-            <div>ABOUT US</div>
-            <div>HIRE FROM US</div>
-            <div>FQA</div>
-            <div>EVENTS</div>
-            <div><button>Refer & earn</button></div>
-            <div><button>LOGIN</button></div>
+            <button>LOGIN</button>
         </div>
     </div>
 </body>
