@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Calculator</title>
+        <style>
+            h1{
+                color: teal;
+                margin: auto;
+                text-align: center;
+            }
+            #calculator{
+                height: 450px;
+                width: 400px;
+                margin: auto;
+                border: 1px solid transparent;
+                border-radius: 20px;
+                box-shadow: rgba(100, 100, 111, 0.2) 
+                0px 7px 29px 0px;
+            }
+            #display{
+                height: 10%;
+                width: 85%;
+                margin: auto;
+                margin-top:20px;
+                box-shadow: rgba(100, 100, 111, 0.2)
+                 0px 7px 29px 0px;
+                 border-radius: 20px;
+            }
+            #keyboard{
+                width: 85%;
+                height: 70%;
+                margin: auto;
+                box-shadow: rgba(100, 100, 111, 0.2) 
+                0px 7px 29px 0px;
+                margin-top: 20px;
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: repeat(4,70px);
+            }
+            #keyboard > div{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                font-size: 20px;
+                margin:10px;
+                border-radius: 20%;
+                box-shadow: rgba(100, 100, 111, 0.2)
+                 0px 7px 29px 0px;
+                
+            }
+            .b{
+                background-color: black;
+                color: white;
+            }
+            .red{
+                background-color: red;
+                color: white;
+            }
+            #keyboard > div:hover{
+                background-color: pink;
+                color: blue;
+            }
+
+        </style>
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div id="calculator">
+        <div id="display"></div>
+        <div id="keyboard">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div class="b">+</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div class="b">-</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div class="b">*</div>
+            <div class="red">C</div>
+            <div>0</div>
+            <div class="b">=</div>
+            <div class="b">/</div>
+        </div>
+    </div>
+</body>
+</html>
