@@ -3,9 +3,15 @@ var amazon =[
     {name:"led",price:6000,rating:5},
     {name:"headphone",price:8000,rating:3},
 ];
-var add=0;
-for(var i=0;i<amazon.length;i++){
-    add+=amazon[i].rating
+var newproduct={name:"palysyote",price:9000,rating:9};
+amazon.push(newproduct);
+console.log(amazon);
+for(var i=0; i<amazon.length; i++){
+    if(amazon[i].rating>4){
+        console.log(amazon[i].name);
+    }
 }
-var avg=add/amazon.length;
-console.log(avg);
+
+for(var i=0;i<amazon.length;i++){
+    console.log(amazon[i].name,amazon[i].price,amazon[i].rating)
+}
