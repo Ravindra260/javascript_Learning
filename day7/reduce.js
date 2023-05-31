@@ -1,8 +1,4 @@
- var mark=[10,20,30,40];
- var sum=mark.reduce(function(acc,elem){
-  return acc+elem
- })
- console.log(sum)
+
 
 
  //with intial value
