@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+</head>
+<body>
+    <h1 id="head">Changed Me</h1>
+    <button onclick="like()">Like</button>
+    <button onclick="dislike()">dislike</button>
+</body>
+</html>
+<script>
+    function like(){
+         document.getElementById("head").innerText="Some Like Me"
+    }
+    function dislike(){
+         document.getElementById("head").innerText="someone dislike me"
+    }
+</script>

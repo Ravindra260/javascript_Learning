@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age check html</title>
+</head>
+<body>
+    <input id="age" type="number" placeholder="enter age">
+    <button onClick="agecheck()">submit</button>
+    <h1 id="res">display result here</h1>
+</body>
+</html>
+
+<script>
+    function agecheck()
+    {
+        var userage=document.getElementById("age").value;
+        if(userage > 18)
+        {
+            document.getElementById("res").innerText="You can Drive";
+        }
+        else if(userage < 18)
+        {
+            document.getElementById("res").innerText="You cannot Drive";
+        }
+        else
+        {
+            document.getElementById("res").innerText="you are just about to drive";
+        }
+    }
+</script>
