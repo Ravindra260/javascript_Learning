@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form html</title>
+</head>
+<body>
+    <form>
+    <input id="name" type="text" placeholder="enter name"/>
+    <input id="mob" type="text" placeholder="mobile nu"/>
+    <input type="submit"/>
+    </form>
+    <h1></h1>
+    <h2></h2>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",myfunction)
+    function myfunction(){
+        event.preventDefault();
+   var a =  document.querySelector("#name").value;
+   var b = document.querySelector("#mob").value;
+   document.querySelector("h1").innerText=a;
+   document.querySelector("h2").innerText=b;
+    }
+   
+</script>

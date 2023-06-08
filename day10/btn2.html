@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create elemetnt</title>
+    <style>
+        button{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let box=["PRimary","secondary","easy","danger","warning","Link"];
+    for(var i=0;box.length;i++){
+    let btn=document.createElement("button")
+    btn.innerText=box[i];
+   // btn.style.backgroundColor="teal"
+    document.querySelector("body").append(btn)
+    }
+
+</script>

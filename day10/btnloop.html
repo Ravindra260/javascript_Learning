@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create elemetnt</title>
+    <style>
+        button{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var bttn=[
+            {name: "primary",color:"white",bgcolor:"teal"},
+            {name: "Secobdary",color:"white",bgcolor:"grey"},
+            {name: "tertiary",color:"white",bgcolor:"orange"},
+            {name: "sucee",color:"white",bgcolor:"pink"},
+            {name: "warning",color:"white",bgcolor:"pink"},
+            {name: "sucess",color:"white",bgcolor:"yellow"},
+            {name: "link",color:"white",bgcolor:"blue"},
+            {name: "lastbt",color:"white",bgcolor:"green"}
+            ];
+//     for(var i=0;i<bttn.length;i++){
+//     let btn=document.createElement("button")
+//     btn.innerText=bttn[i].name;
+//    btn.style.backgroundColor=bttn[i].bgcolor;
+//     document.querySelector("body").append(btn)
+//     }
+//here we can use forEach loop
+bttn.forEach(function(elem,index,array){
+    let btn=document.createElement("button");
+    btn.innerText=elem.name;
+    btn.style.backgroundColor=elem.bgcolor;
+    document.querySelector("body").append(btn);   
+});
+
+</script>

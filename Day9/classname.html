@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByClassName</title>
+</head>
+<body>
+    <p class="csk">I am dhoni from chennai</ p>
+    <p class="mi"> i am sachin from mumbai</ p>
+    <p class="bang"> I am Kholi From Bangkore</ p>
+    <p class="mi"> I am Rohit From Mumbai</ p>
+    <p class="bang">I am abd from banglore</ p>
+    <p class="csk"> I am raina from chennai</ p>s
+</body>
+</html>
+<script>
+    var chaennai=document.getElementsByClassName("csk")
+    console.log(chaennai)
+    var banglore =document.getElementsByClassName("bang")
+    console.log(banglore)
+    console.log(banglore[1])
+    for(var i=0;i<chaennai.length;i++){
+        console.log(chaennai[i])
+    }
+</script>
