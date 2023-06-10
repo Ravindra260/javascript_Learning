@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Investor</title>
+    <style>
+        #container{
+             display: grid;
+             grid-template-columns: repeat(4,1fr);
+             grid-template-rows: repeat(2,auto);
+             gap:10px;
+             margin-bottom: 0px;
+             justify-content: center;
+             align-items: center;
+             /* border: 3px solid blue; */
+        }
+        h2+img{
+            width: 150px;
+            height: 150px;
+            margin-top: -65px;
+            justify-content: center;
+            align-items: center;
+        }
+        #container>div{
+            justify-content: center;
+            text-align: center;
+            width: 90%;
+            height: 95%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            /* border: 3px solid red; */
+            margin: auto;
+            margin-bottom: 0px;
+        }
+        .mystyle{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script>
+    let mentor =[
+    {image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/angad_ahuja_0eef27f35a.jpg",
+    name:"Angad Ahuja",
+    logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cisco_rect_7d73d828a9.svg"},
+    {image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/aayushma_agrawal_7ce66ea067.jpg",
+    name:"AKASHITA YADAV",
+    logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"},
+    {image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/amol_holani_104aa76aad.jpeg",
+    name:"AMOL HOLANI",
+    logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"},
+    {image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/yash_shukla_f8d69a6bb2.jpg",
+    name:"Yadav Ravindra",
+    logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"},
+    {image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/amol_holani_104aa76aad.jpeg",
+    name:"AMOL HOLANI",
+    logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"},
+    {image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/amol_holani_104aa76aad.jpeg",
+    name:"AMOL HOLANI",
+    logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"},
+    {image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/nitesh_409e88531a.jpg",
+    name:"Nitesh Jain",
+    logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/amazon_rect_9e0cd101b1.svg"},
+    {image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/kanishk_aman_247ff1ba31.jpg",
+    name:"Kanish Aman",
+    logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/flipkart_e9b84a5d5e.svg"}
+    ];
+      
+      mentor.forEach(function(elem){
+        let box=document.createElement("div");
+        let avatar=document.createElement("img");
+        avatar.setAttribute("src",elem.image);
+        avatar.classList.add("mystyle");
+         let mentorname =document.createElement("h2");
+         mentorname.innerText=elem.name;
+         mentorname.style.textAlign="center"
+         let companylogo =document.createElement("img");
+         companylogo.setAttribute("src",elem.logo);
+
+        box.append(avatar,mentorname,companylogo);
+        document.querySelector("#container").append(box);
+
+      })
+</script>
