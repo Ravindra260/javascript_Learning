@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <labe>Put Your Wight in(KG)</labe>
+    <input type="number" id="weight"/></br>
+    <label>Put Your Height IN(CM)</label>
+    <input type="number" id="height"></br>
+    <button id="submit">Calculate BMI</button></br>
+    <h1 id="result"></h1>
+</body>
+<script>
+    var weight=document.querySelector("#weight")
+    var height=document.querySelector("#height")
+    var submit=document.querySelector("#submit")
+    var result=document.querySelector("#result")
+    submit.addEventListener("click",myfunction);
+    function myfunction(){
+     var weightvalue=Number(weight.value);
+     var heightvalue=Number(height.value)/100;
+     var BMI=((weightvalue)/(heightvalue*heightvalue));
+     resultval="";
+     if(BMI<=18.4){
+        resultval="UNDER WEIGHT";
+     }
+     else if(BMI>=18.5 && BMI<=24.9){
+        resultval="Normal Weight";
+     }else if(BMI>=25.5 && BMI<=29.9){
+        resultval="Over Wight";
+     }else{
+        resultval="obese";
+     }
+     result.textContent="My BMI is:-"+BMI+ " " +resultval
+    }
+
+</script>
+</html>

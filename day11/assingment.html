@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="continent_select">
+        <option value="India">India</option>
+        <option value="United States of America">United States of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Bangladesh">Bangaladesh</option>
+    </select>
+    <button id="submit">Find continent</button>
+</body>
+<script>
+    var countries=document.querySelector("#continent_select");
+    var button=document.querySelector("#submit");
+    button.addEventListener("click",myfunction);
+    function myfunction(){
+        var continent="Asia";
+        switch(countries.value){
+            case "India":
+            continent="Asia";
+            break;
+            case "United States of America":
+            continent="United States of America";
+            break;
+            case "china":
+            continent="Asia";
+            break;
+            case "Nepal":
+            continent="Asia";
+            break;
+            case "Australia":
+            continent="Australia";
+            break;
+            case "France":
+            continent="Europe";
+            break;
+            case "Germany":
+            continent="Europe";
+            break;
+            case "South Africa":
+            continent="South Africa";
+            break;
+            case "Canada":
+            continent="canada";
+            break;
+            case "Singapore":
+            continent="Asia";
+            break;
+            case "Bangaldesh":
+            continent="Paksitani";
+            break;
+            default:
+            break;
+        }
+       alert("this is continent:-" +" " +continent);
+    }
+</script>
+</html>
