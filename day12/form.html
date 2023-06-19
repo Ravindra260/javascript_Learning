@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    form {
+      width: 400px;
+      border: 1px solid rgb(230, 230, 230);
+      margin: 3% auto;
+      padding: 3%;
+      background: white;
+    }
+
+    input,
+    select {
+      display: block;
+      margin: 15px 0px;
+      font-size: 20px;
+      padding: 2%;
+    }
+
+    #submit {
+      width: 100%;
+      color: aqua;
+      background-color: rgb(24, 64, 110);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <h1>DSA Revision App</h1>
+    <input placeholder="Enter Question title" id="title" type="text" />
+    <input placeholder="Enter OJ link" type="text" id="link" />
+    <select id="difficulty">
+      <option value="">Select Difficulty level</option>
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+
+    <input id="submit" type="submit" value="Submit" />
+  </form>
+</body>
+
+</html>

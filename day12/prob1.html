@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <input type="text" id="name" placeholder="entername" required/><br><br>
+        <input type="number" id="age" placeholder="Age" required/><br><br>
+        <select id="gender" required><br><br>
+            <option value="">Select</option>
+            <option value="Male" >Male </option>
+            <option value="Female">Female</option>
+        </select><br><br>
+       <input type="submit"/></br>
+       <h2></h2>
+    </form>
+</body>
+<script>
+    let arr=[];
+    document.querySelector("form").addEventListener("submit",getUser)
+    function getUser(){
+        event.preventDefault();
+        let userobj={
+            userName:document.querySelector("#name").value,
+            userAge:document.querySelector("#age").value,
+            uerGender:document.querySelector("#gender").value,
+        };
+        arr.push(userobj);
+        localStorage.setItem("data",JSON.stringify(userobj))
+        let getobj=JSON.parse(localStorage.getItem("data"))
+        document.querySelector("h2").innerText=getobj.userName+":"+getobj.userAge;
+        console.log(userobj);
+    }
+    
+</script>
+</html>

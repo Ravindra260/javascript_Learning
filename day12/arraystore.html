@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Store on Local Storage</title>
+</head>
+<body>
+    <h1>Local Storage2</h1>
+    <h2></h2>
+    <h3></h3>
+</body>
+<script>
+    let arr=[1,2,3,4,5,67,8]
+    arr=JSON.stringify(arr);
+    localStorage.setItem("arrint",arr);
+   let getarr=JSON.stringify(localStorage.getItem("arrint"));
+   document.querySelector("h2").innerText=getarr;
+    let name=["rahul","ranjit","pratik"];
+    localStorage.setItem("naam",JSON.stringify(name))
+    localStorage.getItem("naam"); 
+    let objname={name:"staya",place:"Banglore"}
+    localStorage.setItem("details",JSON.stringify(objname));
+    let getobj=JSON.parse(localStorage.getItem("details"))
+    document.querySelector("h3").innerText=getobj.place;
+    console.log(getobj.name);
+    document.querySelector("h1").innerText=getobj.name+":"+getobj.place;
+    
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incerement decrement using local storage</title>
+</head>
+<body>
+    <h1></h1>
+    <button>Increment</button>
+    <button>Decrement</button>
+</body>
+<script>
+    
+   let counter=localStorage.getItem("localcounter")  ||0;
+   console.log(counter);
+//    if(localStorage.getItem("localcounter")==null){
+//     counter=0;
+//    }else{
+//    counter= localStorage.getItem("localcounter");
+//    }
+    document.querySelector("h1").innerText=counter;
+    document.querySelector("h1+button").addEventListener("click",incf);
+    function incf(){
+        counter++;
+        document.querySelector("h1").innerText=counter;
+        localStorage.setItem("localcounter",counter);
+    }
+    document.querySelector("button+button").addEventListener("click",dcf);
+    function dcf(){
+      counter--;
+        document.querySelector("h1").innerText=counter;
+        localStorage.setItem("localcounter",counter);
+    }
+</script>
+</html>

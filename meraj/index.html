@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <form id="form">
+        <h1>STOCK MARKET(SIDE INCOME)</h1>
+        <input placeholder="enter date" id="date" type="date" required />
+        <input placeholder="Enter Stock Name" id="title" type="text" required />
+        <select id="stock" required>
+            <option value="">BUY/SELL</option>
+            <option value="BUY">BUY</option>
+            <option value="SELL">SELL</option>
+        </select>
+        <select id="difficulty" required>
+            <option value="">Profit/LOSS</option>
+            <option value="PROFIT">PROFIT</option>
+            <option value="LOSS">LOSS</option>
+        </select>
+        <input placeholder="PROFIT OR LOSS AMOUNT" id="LOSS" type="number" required />
+        <input id="submit" type="submit" value="Submit" />
+    </form>
+    <table>
+        <thead>
+            <th>Date</th>
+            <th>Stock Name</th>
+            <th>BUY/SELL</th>
+            <th>Profit</th>
+            <th>Profit/Loss Amount</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+<script src="index.js"></script>
