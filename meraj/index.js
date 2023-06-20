@@ -30,13 +30,6 @@ function displaytable(userarr) {
         td4.innerText = elem.PORL;
         let td5 = document.createElement("td");
         td5.innerText = elem.Amount;
-        if (elem.Amount >= 0) {
-            td5.innerText = elem.Amount;
-            td5.color = "green";
-        } else {
-            td5.innerText = elem.Amount
-            td5.color = "red";
-        }
         // if (elem.Amount >= 0) {
         //     td5.color = "red";
         // } else {
