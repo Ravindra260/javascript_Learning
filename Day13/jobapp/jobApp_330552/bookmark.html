@@ -22,6 +22,7 @@
           <th>Name</th>
           <th>Email</th>
           <th>Job Applied</th>
+          <th>Delete Bookmarks</th>
         </tr>
       </thead>
       <tbody id="body"></tbody>
@@ -34,7 +35,7 @@
 
   displaydata()
   function displaydata() {
-    bookdata.forEach(function (elem) {
+    bookdata.forEach(function (elem, index) {
       let tr = document.createElement("tr");
       let td1 = document.createElement("td");
       td1.innerText = elem.personName
@@ -42,11 +43,22 @@
       td2.innerText = elem.personEmail
       let td3 = document.createElement("td");
       td3.innerText = elem.personRolw
-      tr.append(td1, td2, td3);
+      let td4 = document.createElement("td")
+      td4.innerText = "Delete"
+      td4.style.backgroundColor = "red"
+      td4.addEventListener("click", function () {
+        deletedata(index)
+      })
+
+      tr.append(td1, td2, td3, td4);
       document.querySelector("#body").append(tr)
     })
   }
-
+  function deletedata(index) {
+    bookdata.splice(index, 1)
+    localStorage.setItem("bookmarkdata", JSON.stringify(bookdata))
+    window.location.reload()
+  }
 </script>
 
 </html>

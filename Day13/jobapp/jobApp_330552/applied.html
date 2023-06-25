@@ -23,7 +23,22 @@
     <div><a href="applied.html">Applied Jobs</a></div>
     <div><a href="bookmark.html">Bookmarks</a></div>
   </div>
-
+  <select id="sortname" onchange="handlesort()">
+    <option value="">Sort By Name</option>
+    <option value="Acending">Acending</option>
+    <option value="Decending">Decending</option>
+  </select>
+  <select id="sortsalary" onchange="handlesalary()">
+    <option value="">Sort By salary</option>
+    <option value="Acending">Acending</option>
+    <option value="Decending">Decending</option>
+  </select>
+  <select name="" id="filter" onchange="handlefilter()">
+    <option value="">Sort By Role</option>
+    <option value="FSD">FSD</option>
+    <option value="Backend">Backend</option>
+    <option value="Frontend">Frontend</option>
+  </select>
   <main>
     <table>
       <thead>
@@ -45,10 +60,70 @@
 <script>
   //you need to code here
   let arrfromLS = JSON.parse(localStorage.getItem("Jobdata")) || []
+  // console.log(arrfromLS)
+
+  function handlefilter() {
+    let selected = document.querySelector("#filter").value;
+    let filteredlist = arrfromLS.filter(function (elem) {
+      return elem.personRolw === selected;
+    });
+    console.log(filteredlist)
+    displayTable(filteredlist)
+
+  }
+  function handlesalary() {
+    let selected = document.querySelector("#sortsalary").value;
+    if (selected == "Acending") {
+      arrfromLS.sort(function (a, b) {
+        // if (a.personSalary > b.personSalary) return 1;
+        // if (a.personSalary < b.personSalary) return -1;
+        // return 0;
+        return a.personSalary - b.personSalary
+      });
+      displayTable()
+    }
+    if (selected == "Decending") {
+      arrfromLS.sort(function (a, b) {
+        // if (a.personSalary > b.personSalary) return -1;
+        // if (a.personSalary < b.personSalary) return 1;
+        // return 0;
+        return b.personSalary - a.personSalary
+      });
+      displayTable()
+    }
+
+  }
+
+
+  // let arrfromLS = JSON.parse(localStorage.getItem("Jobdata")) || []
+  // console.log(arrfromLS)
+  function handlesort() {
+    document.querySelector("tbody").innerHTML = ""
+    let selected = document.querySelector("#sortname").value;
+    if (selected == "Acending") {
+      arrfromLS.sort(function (a, b) {
+        if (a.personName > b.personName) return 1;
+        if (a.personName < b.personName) return -1;
+        return 0;
+      });
+      displayTable()
+    }
+    if (selected == "Decending") {
+      arrfromLS.sort(function (a, b) {
+        if (a.personName > b.personName) return -1;
+        if (a.personName < b.personName) return 1;
+        return 0;
+      });
+      displayTable()
+    }
+
+  }
+  // console.log(arrfromLS)
 
   displayTable();
 
   function displayTable() {
+    document.querySelector("tbody").innerHTML = ""
     arrfromLS.forEach(function (elem) {
       let tr = document.createElement("tr");
       let td1 = document.createElement("td");
@@ -73,6 +148,7 @@
     bookmark.push(elem);
     localStorage.setItem("bookmarkdata", JSON.stringify(bookmark))
   }
+
 </script>
 
 </html>

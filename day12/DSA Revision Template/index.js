@@ -9,7 +9,6 @@ function mydsa(event) {
         QueDifficulty: document.querySelector("#difficulty").value
     };
     userarr.push(userobj);
-    console.log(userarr);
     displaytable(userarr);
     localStorage.setItem("quedata", JSON.stringify(userarr));
 }
